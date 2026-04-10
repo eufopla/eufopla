@@ -10,21 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - name: Generate snake
         uses: Platane/snk@v3
         with:
           github_user_name: eufopla
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-          color_snake: "#00bfff"
-          color_dots: "#2a2a2a,#0a2540,#134074,#1f6feb,#4cc9f0"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            dist/github-contribution-grid-snake.svg?palette=blue
+            dist/github-contribution-grid-snake-dark.svg?palette=blue
 
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "generate snake"
-          branch: main
           file_pattern: dist/*.svg
