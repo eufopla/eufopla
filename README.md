@@ -12,8 +12,6 @@
 
 <br/>
 
----
-
 <div align="center">
 
 ##  COMMIT ACTIVITY
@@ -35,8 +33,6 @@
 </div>
 
 <br/>
-
----
 
 <div align="center">
 
